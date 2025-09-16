@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Form</title>
+    <style>
+        body{
+            background-color: lightgrey;
+        }
+        h2{
+            text-align: center;
+            color: goldenrod;
+        }
+        h5{
+            color:orangered;
+        }
+        #abc{
+            cursor: pointer;
+        }
+        #city{
+            cursor: pointer;
+        }
+        button{
+            background-color: rgb(168, 168, 173);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        file{
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: orangered;
+            font-size: 17px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form  action="server"> 
+        <h2>RAGISTRATION FORM</h2>
+        
+        Username:<input type="text" placeholder="Enter text here"><br><br>
+        password:<input type="password" placeholder="Enter password here"><br><br>
+        Confirm Password:<input type="password" placeholder="Re-enter password here"><br><br>
+        Email:<input type="email" placeholder="@gmail.com"><br><br>
+        DOB:<input type="date" id="abc"><br><br>
+        File:<input type="file" ><br><br>
+        Address:<input type="textarea" placeholder="Enter your address here" cols="30" rows="10"><br><br>
+        
+        <h5>GENDER</h5>
+        <label>
+      <input type="radio" name="gender" value="male"> Male
+    </label><br>
+      <input type="radio" name="gender" value="female"> Female
+    </label><br>
+      <input type="radio" name="gender" value="female"> Others
+    </label><br>
+        
+        
+        <h5>SELECT YOUR CITY</h5>
+        <select name="city" id="city">
+            <option value="delhi">DELHI</option>
+            <option value="noida">NOIDA</option>
+            <option value="ghaziabad">GHAZIABAD</option>
+            <option value="faridabad">FARIDABAD</option>
+            <option value="meerut">MEERUT</option>
+            <option value="PATNA">PATNA</option>
+        </select><br><br>
+        <h5>CHOOSE YOUR SUBJECT</h5>
+        <input type="checkbox" name="subject" value="maths">MATHS<br>
+        <input type="checkbox" name="subject" value="science">SCIENCE<br>
+        <input type="checkbox" name="subject" value="science">SOCIAL SCIENCE<br>
+        <input type="checkbox" name="subject" value="science">ENGLISH<br>
+        <br><br>
+
+        <BUTTON type="submit" action="server"> SUBMIT</BUTTON>
+
+        <h5>SUBMIT YOUR REVIEW</h5>
+        <textarea name="review" id="review" cols="50" rows="10" placeholder="Enter your review here"></textarea>
+
+
+        <marquee behavior="" direction="left">ALL THE BEST FOR YOUR EXAM</marquee>
+        <marquee behavior="" direction="right">ankitkr756208@gmail.com</marquee>
+
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coding Hub - Your College Tech Club</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+        }
+        /* Custom styles for active nav link */
+        .nav-link.active {
+            color: #3b82f6; /* Blue-500 */
+            font-weight: 600;
+        }
+        /* Simple animation for section headers */
+        .section-header {
+            animation: fadeInDown 0.8s ease-out;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-gray-900">
+                <span class="text-blue-600">&lt;</span>The Coding Hub<span class="text-blue-600">&gt;</span>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Home</a>
+                <a href="#about" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">About Us</a>
+                <a href="#events" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Events</a>
+                <a href="#gallery" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Gallery</a>
+                <a href="#join" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition duration-300 shadow-md">Join Us</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2">
+            <a href="#home" class="nav-link block text-gray-600 hover:text-blue-600">Home</a>
+            <a href="#about" class="nav-link block text-gray-600 hover:text-blue-600">About Us</a>
+            <a href="#events" class="nav-link block text-gray-600 hover:text-blue-600">Events</a>
+            <a href="#gallery" class="nav-link block text-gray-600 hover:text-blue-600">Gallery</a>
+            <a href="#join" class="block bg-blue-600 text-white text-center mt-2 px-5 py-2 rounded-full hover:bg-blue-700">Join Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex items-center bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">Welcome to <span class="text-blue-600">The Coding Hub</span></h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8">Your journey from novice to ninja begins here. We are a community of passionate coders, developers, and tech enthusiasts.</p>
+                    <a href="#about" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-lg">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-header text-3xl md:text-4xl font-bold text-gray-900">About The Hub</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Discover our mission, our story, and the amazing people behind our club.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-600">Our Mission</h3>
+                        <p class="text-gray-600 leading-relaxed">To foster a vibrant and inclusive environment where students can learn, collaborate, and grow their skills in technology. We aim to bridge the gap between academic learning and real-world application through workshops, projects, and networking events.</p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Our+Team" alt="Club Members" class="rounded-lg shadow-xl w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-header text-3xl md:text-4xl font-bold text-gray-900">Our Events</h2>
+                    <p class="text-gray-600 mt-2">From hackathons to guest lectures, there's always something happening!</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Event Card 1 -->
+                    <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-blue-700">Intro to Web Development</h3>
+                            <p class="text-gray-500 text-sm mb-3">Oct 15, 2025 | 6:00 PM | Tech Hall 101</p>
+                            <p class="text-gray-700">Join us for a beginner-friendly workshop on the basics of HTML, CSS, and JavaScript. No prior experience needed!</p>
+                        </div>
+                    </div>
+                    <!-- Event Card 2 -->
+                    <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-blue-700">Hackathon 2025</h3>
+                            <p class="text-gray-500 text-sm mb-3">Nov 5-6, 2025 | 24 Hours | Main Auditorium</p>
+                            <p class="text-gray-700">Compete with the best to build something amazing in 24 hours. Prizes, food, and fun guaranteed.</p>
+                        </div>
+                    </div>
+                    <!-- Event Card 3 -->
+                    <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-blue-700">Guest Lecture: AI in 2025</h3>
+                            <p class="text-gray-500 text-sm mb-3">Dec 1, 2025 | 7:00 PM | Virtual Event</p>
+                            <p class="text-gray-700">An industry expert from Google will discuss the latest trends and future of Artificial Intelligence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-header text-3xl md:text-4xl font-bold text-gray-900">Club Moments</h2>
+                    <p class="text-gray-600 mt-2">A glimpse into our activities and the fun we have.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/500x300/e0e7ff/374151?text=Event+1" alt=""></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/500x400/dbeafe/374151?text=Workshop" alt=""></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/500x500/bfdbfe/374151?text=Team" alt=""></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/500x350/93c5fd/374151?text=Fun" alt=""></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/500x450/60a5fa/ffffff?text=Coding" alt=""></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/500x300/3b82f6/ffffff?text=Session" alt=""></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/500x300/2563eb/ffffff?text=Hackathon" alt=""></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/500x600/1d4ed8/ffffff?text=Winners" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Us Section -->
+        <section id="join" class="py-20 bg-blue-600 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-header text-3xl md:text-4xl font-bold mb-4">Ready to Join the Hub?</h2>
+                <p class="text-blue-100 max-w-2xl mx-auto mb-8">Become a part of our growing community! Membership is open to all students, regardless of major or skill level. Get access to exclusive workshops, networking opportunities, and more.</p>
+                <a href="mailto:contact@thecodinghub.com" class="bg-white text-blue-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 transform hover:scale-105 shadow-lg">Contact Us Now</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 The Coding Hub. All Rights Reserved.</p>
+            <p class="text-gray-400 mt-2">Made with ❤️ by the students, for the students.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Active Link Highlighting -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileNavLinks = mobileMenu.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Active link highlighting on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

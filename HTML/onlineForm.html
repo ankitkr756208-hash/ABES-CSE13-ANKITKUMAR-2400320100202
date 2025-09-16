@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 700px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 12px;
+            vertical-align: top;
+        }
+
+        td:first-child {
+            font-weight: bold;
+            color: #555;
+            width: 30%; /* Label column width */
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Important for padding and width */
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        
+        .radio-group label,
+        .checkbox-group label {
+            font-weight: normal;
+            margin-right: 15px;
+        }
+
+        .button-container {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        input[type="reset"] {
+            background-color: #f44336;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+        input[type="reset"]:hover {
+            background-color: #e53935;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Student Registration Form</h1>
+        <form action="#" method="post">
+            <table>
+                <!-- First Name -->
+                <tr>
+                    <td><label for="firstName">First Name</label></td>
+                    <td><input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required></td>
+                </tr>
+
+                <!-- Last Name -->
+                <tr>
+                    <td><label for="lastName">Last Name</label></td>
+                    <td><input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required></td>
+                </tr>
+
+                <!-- Date of Birth -->
+                <tr>
+                    <td><label for="dob">Date of Birth</label></td>
+                    <td><input type="date" id="dob" name="dob" required></td>
+                </tr>
+
+                <!-- Email ID -->
+                <tr>
+                    <td><label for="email">Email ID</label></td>
+                    <td><input type="email" id="email" name="email" placeholder="Enter your email" required></td>
+                </tr>
+
+                <!-- Mobile Number -->
+                <tr>
+                    <td><label for="mobile">Mobile Number</label></td>
+                    <td><input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required></td>
+                </tr>
+
+                <!-- Gender -->
+                <tr>
+                    <td>Gender</td>
+                    <td class="radio-group">
+                        <input type="radio" id="male" name="gender" value="Male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+
+                <!-- Address -->
+                <tr>
+                    <td><label for="address">Address</label></td>
+                    <td><textarea id="address" name="address" placeholder="Enter your address"></textarea></td>
+                </tr>
+                
+                <!-- City -->
+                <tr>
+                    <td><label for="city">City</label></td>
+                    <td><input type="text" id="city" name="city" placeholder="Enter your city"></td>
+                </tr>
+
+                <!-- State -->
+                <tr>
+                    <td><label for="state">State</label></td>
+                    <td><input type="text" id="state" name="state" placeholder="Enter your state"></td>
+                </tr>
+
+                <!-- Country -->
+                <tr>
+                    <td><label for="country">Country</label></td>
+                    <td><input type="text" id="country" name="country" placeholder="Enter your country"></td>
+                </tr>
+
+                <!-- Hobbies -->
+                <tr>
+                    <td>Hobbies</td>
+                    <td class="checkbox-group">
+                        <input type="checkbox" id="drawing" name="hobbies[]" value="Drawing"><label for="drawing">Drawing</label>
+                        <input type="checkbox" id="singing" name="hobbies[]" value="Singing"><label for="singing">Singing</label>
+                        <input type="checkbox" id="dancing" name="hobbies[]" value="Dancing"><label for="dancing">Dancing</label>
+                        <input type="checkbox" id="other" name="hobbies[]" value="Other"><label for="other">Others</label>
+                    </td>
+                </tr>
+                
+                <!-- Qualification -->
+                <tr>
+                    <td>Qualification</td>
+                    <td>
+                        <select id="qualification" name="qualification">
+                            <option value="">Select Qualification</option>
+                            <option value="High School">High School</option>
+                            <option value="Associate Degree">Associate Degree</option>
+                            <option value="Bachelor's Degree">Bachelor's Degree</option>
+                            <option value="Master's Degree">Master's Degree</option>
+                            <option value="PhD">PhD</option>
+                        </select>
+                    </td>
+                </tr>
+                
+                <!-- Courses Applied For -->
+                 <tr>
+                    <td>Courses Applied For</td>
+                    <td class="radio-group">
+                        <input type="radio" id="bca" name="course" value="BCA">
+                        <label for="bca">BCA</label>
+                        <input type="radio" id="bba" name="course" value="BBA">
+                        <label for="bba">BBA</label>
+                         <input type="radio" id="btech" name="course" value="B.Tech">
+                        <label for="btech">B.Tech</label>
+                         <input type="radio" id="mba" name="course" value="MBA">
+                        <label for="mba">MBA</label>
+                    </td>
+                </tr>
+
+                <!-- Submit and Reset Buttons -->
+                <tr>
+                    <td colspan="2" class="button-container">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</body>
+</html>
