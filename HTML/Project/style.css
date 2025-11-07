@@ -1,0 +1,131 @@
+/* General Body and Font Styles (Exp 8.1) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 15px;
+    /* Setting a background image for the page (Exp 8.2) */
+    background-image: url('background.jpg');
+    background-repeat: no-repeat; /* Control repetition (Exp 9.1) */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1, h2 {
+    color: #0056b3; /* Different font style/color */
+}
+
+/* Styles for Top Frame */
+.top-frame-body {
+    background: #0056b3;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 0;
+}
+.header {
+    display: flex;
+    align-items: center;
+}
+.header h1 {
+    color: white;
+    margin-left: 15px;
+}
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+/* Link Styles (Exp 9.2) */
+a:link {
+    color: #0056b3;
+    text-decoration: none;
+}
+a:visited {
+    color: #5a0094;
+}
+a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+a:active {
+    color: #ff4500;
+}
+.top-nav a:hover { /* Override for top navigation */
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+/* Styles for Left Frame */
+.left-frame-body {
+    background: #e9ecef;
+    margin: 0;
+    padding: 15px;
+}
+.left-frame-body ul {
+    list-style-type: none;
+    padding: 0;
+}
+.left-frame-body li a {
+    display: block;
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+/* Styles for Main Content Area */
+.main-frame-body {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 8px;
+    /* Setting a background image for a single element (Exp 8.2) */
+    background-image: url('element-bg.png');
+    background-repeat: repeat-y; /* Control repetition (Exp 9.1) */
+}
+
+/* Table Styles */
+.catalogue-table, .cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.catalogue-table td, .cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    vertical-align: top;
+}
+.cart-table th {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Form Styles */
+.form-layout {
+    max-width: 400px;
+}
+.form-layout input[type="text"],
+.form-layout input[type="password"],
+.form-layout select,
+.form-layout textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-layout input[type="submit"],
+.form-layout input[type="reset"],
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form-layout input[type="reset"] {
+    background-color: #6c757d;
+}

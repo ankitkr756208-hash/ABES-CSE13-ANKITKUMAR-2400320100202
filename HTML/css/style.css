@@ -1,0 +1,27 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav    main"
+    "nav    aside"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 80px 1fr 1fr 60px;
+  height: 100vh;
+  gap: 10px;
+  padding: 10px;
+  background: #f1f5f9;
+}
+
+/* Assigning each section */
+header { grid-area: header; background: #2563eb; color: white; text-align: center; }
+nav    { grid-area: nav; background: #1e3a8a; color: white; padding: 10px; }
+main   { grid-area: main; background: #ffffff; padding: 10px; }
+aside  { grid-area: aside; background: #e2e8f0; padding: 10px; }
+footer { grid-area: footer; background: #111827; color: white; text-align: center; line-height: 60px; }

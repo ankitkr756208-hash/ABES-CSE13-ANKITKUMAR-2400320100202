@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* background-color: #f4f4f4; */
+            background-color: rgb(199, 203, 195);
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .product {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition:all 0.3 ease;
+            opacity:0.9;
+        }
+         .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            opacity: 1;
+         }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius:5px;
+            transition:opacity 0.3s ease;
+        }
+        .card h2 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .card p {
+            color: #888;
+            font-size: 1em;
+        }
+        .card button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition:all 0.3s ease;
+        }
+        .card button:hover {
+            
+            background-color: #19692c;
+            font-size: 15px;
+            
+
+
+        }
+        footer{
+    text-align: center;
+    padding: 20px 0;
+    background: #e9ecef;
+    color: #333;
+    font-size: 0.95em;
+    border-top: 1px solid #ccc;
+}
+
+    </style>
+</head>
+<body>
+    <header>My online store</header>
+    <section class="product">
+        <article class="card">
+            <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?cs=srgb&dl=pexels-ferarcosn-190819.jpg&fm=jpg" alt="Product 1">
+            <h2>Watch</h2>
+            <p>$10.00</p>
+            <button>Add to Cart</button>
+        </article>
+        <article class="card">
+            <img src="https://www.livemint.com/lm-img/img/2025/02/21/1600x900/best_laptop_under_Rs_30000_1740122015828_1740122045813.jpg" alt="Product 2">
+            <h2>Laptop</h2>
+            <p>$100.00</p>
+            <button>Add to Cart</button>
+        </article>
+        <article class="card">
+            <img src="https://m.media-amazon.com/images/I/71r8FwtrrrL._UF350,350_QL80_.jpg" alt="Product 3">
+            <h2>Book</h2>
+            <p>$5.00</p>
+            <button>Add to Cart</button>
+        </article>
+        <article class="card">
+            <img src="https://images.meesho.com/images/products/81643593/d4wnx_512.webp?width=512" alt="Product 4">
+            <h2>Shoes</h2>
+            <p>$50.00</p>
+            <button>Add to Cart</button>
+        </article>
+        <article class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnChKlhtZJwKqaILgpbkCGODJPhWqMKjNIBw&s" alt="Product 4">
+            <h2>Mobile</h2>
+            <p>$500.00</p>
+            <button>Add to Cart</button>
+        </article>
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bHV4dXJ5JTIwY2FyfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000" alt="Product 4">
+            <h2>Car</h2>
+            <p>$5000.00</p>
+            <button>Add to Cart</button>
+        </article>
+    </section>
+     <footer>
+          <p>&copy; 2025 Product Showcase. All rights reserved.</p>
+    </footer>
+  
+</body>
+</html>

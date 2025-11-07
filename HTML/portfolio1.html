@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jane Doe - Web Developer Portfolio</title>
+    <style>
+        /* CSS Section */
+        
+        /* Basic Setup and Typography */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            overflow: auto;
+            padding: 0 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: #2c3e50;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* For z-index demonstration */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar #logo {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 25px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar a:hover {
+            color: #1abc9c;
+        }
+
+        /* Hero/Header Section */
+        .hero {
+            background: #1abc9c;
+            color: #fff;
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .hero img.profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Round corners */
+            border: 4px solid #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: 3rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 0;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+        
+        /* Projects Gallery */
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden; /* Ensures image corners are rounded */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        /* Contact Form */
+        .form {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #1abc9c;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background: #16a085;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #2c3e50;
+            color: #fff;
+        }
+
+        /* CSS Media Query for Responsiveness */
+        @media(max-width: 768px) {
+            .project-gallery {
+                grid-template-columns: 1fr; /* Stack cards on smaller screens */
+            }
+
+            .navbar .container {
+                flex-direction: column;
+            }
+            .navbar ul {
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HTML: Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 id="logo">AK</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HTML: Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <img src="Ankit.jpg" alt="Profile Picture" class="profile-pic">
+            <h1>Hi, I'm Ankit Kumar</h1>
+            <p>A Creative Web Developer Specializing in Modern Web Technologies</p>
+        </div>
+    </header>
+
+    <!-- HTML: About Section -->
+    <section id="about" style="background: #fff;">
+        <div class="container">
+            <h2>About Me</h2>
+            <p style="text-align: center; max-width: 800px; margin: auto;">I am a web developer with a passion for creating clean, responsive, and user-friendly websites. I have a strong foundation in HTML, CSS, and JavaScript. This portfolio showcases my ability to structure content, apply modern styling techniques, and implement client-side functionality. I am always eager to learn new technologies and improve my skills.</p>
+        </div>
+    </section>
+
+    <!-- HTML: Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <!-- Image Gallery -->
+            <div class="project-gallery">
+                <div class="card">
+                    <img src="https://placehold.co/600x400/3498db/ffffff?text=To-Do+App" alt="Project 1">
+                    <div class="card-content">
+                        <h3>To-Do List App</h3>
+                        <p>A simple and intuitive to-do list application built with vanilla JavaScript to manage daily tasks.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.co/600x400/9b59b6/ffffff?text=Tribute+Page" alt="Project 2">
+                    <div class="card-content">
+                        <h3>Tribute Page</h3>
+                        <p>A responsive tribute page designed with modern CSS, including Flexbox and Grid, to honor a notable figure.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.co/600x400/f1c40f/000000?text=Survey+Form" alt="Project 3">
+                    <div class="card-content">
+                        <h3>Online Survey Form</h3>
+                        <p>A comprehensive survey form featuring custom styling and robust client-side validation for a seamless user experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HTML: Contact Section with Form -->
+    <section id="contact" style="background: #fff;">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contactForm" class="form" onsubmit="return validateContactForm()">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Ankit kumar. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript Section -->
+    <script>
+        function validateContactForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Simple validation: check if fields are empty
+            if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                alert('Please fill in all fields.');
+                return false; // Prevent form from submitting
+            }
+
+            // A more robust email check using a regular expression
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+            
+            // If validation passes
+            alert('Thank you for your message! This is a demo and your message has not been sent.');
+            
+            // Clear the form
+            document.getElementById('contactForm').reset();
+            return false; // Prevent default submission for this demo
+        }
+    </script>
+</body>
+</html>

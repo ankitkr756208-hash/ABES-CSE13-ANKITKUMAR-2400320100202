@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #e6dede;
+  font-family: Georgia, serif;
+}
+
+.card {
+  background: #4a90e2;  /* Changed background color */
+  color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card img {
+  border-radius: 5%;
+  margin-bottom: 5px;
+}
+
+.card h2 {
+  margin: 10px 0;
+}
+
+.card p {
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  text-decoration: none;
+  background: #fff;
+  color: #4a90e2;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease; /* transition effect */
+}
+
+.btn:hover {
+  background: #2c3e50;
+  color: #fff;
+}
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="" alt="Profile Picture">
+    <h2>Ankit Kumar</h2>
+    <p>Web Developer | Designer</p>
+    <div class="buttons">
+      <a href="mailto:ankitkr756208@gmail.com" class="btn">Contact Me</a>
+      <a href="https://github.com/ankitkr756208-hash/ABES-CSE13-ANKITKUMAR-2400320100202.git" target="_blank" class="btn">View Portfolio</a>
+    </div>
+  </div>
+</body>
+</html>

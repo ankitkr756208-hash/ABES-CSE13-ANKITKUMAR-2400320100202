@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Personal Portfolio</title>
+    <style>
+        /* CSS Section */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+        /* Navigation Bar */
+        .navbar {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100; /* For z-index demonstration */
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        .navbar ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+        }
+        .navbar ul li {
+            margin-left: 20px;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+        }
+        /* Header/Hero Section */
+        .hero {
+            background: #563d7c;
+            color: #fff;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .hero img.profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Round corners */
+            border: 3px solid #fff;
+        }
+        /* Generic Section Styling */
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #563d7c;
+        }
+        /* Projects Gallery */
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden; /* For rounded corners on image */
+        }
+        .card img {
+            width: 100%;
+            display: block;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        /* Contact Form */
+        .form {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            display: inline-block;
+            background: #563d7c;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #333;
+            color: #fff;
+        }
+        /* CSS Media Query for Responsiveness */
+        @media(max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+            }
+            .navbar ul {
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <h1>John Doe</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+            <h1>Hi, I'm Ankit kumar</h1>
+            <p>A Passionate Web Developer</p>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a web developer with experience in HTML, CSS, and JavaScript. I enjoy building responsive and user-friendly websites. This portfolio is a demonstration of the skills I've learned, including layout, styling, and client-side scripting.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-gallery">
+                <div class="card">
+                    <img src="project1.jpg" alt="Project 1">
+                    <div class="card-content">
+                        <h3>Project One</h3>
+                        <p>A simple to-do list application built with vanilla JavaScript.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="project2.jpg" alt="Project 2">
+                    <div class="card-content">
+                        <h3>Project Two</h3>
+                        <p>A tribute page created with modern CSS techniques like Flexbox.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="project3.jpg" alt="Project 3">
+                    <div class="card-content">
+                        <h3>Project Three</h3>
+                        <p>An online survey form with custom styling and validation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contactForm" class="form" onsubmit="return validateContactForm()">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Ankit kumar. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function validateContactForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Simple validation: check if fields are empty
+            if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                alert('Please fill in all fields.');
+                return false; // Prevent form from submitting
+            }
+
+            // A more robust email check using a regular expression
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+            
+            // If validation passes
+            alert('Thank you for your message!');
+            // In a real application, you would send this data to a server here.
+            
+            // Clear the form for the next message
+            document.getElementById('contactForm').reset();
+            return false; // Prevent default submission to a server for this demo
+        }
+    </script>
+</body>
+</html>
