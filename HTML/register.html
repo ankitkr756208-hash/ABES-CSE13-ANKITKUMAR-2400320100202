@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="main-frame-body">
+    <h2>Registration Form</h2>
+    <form name="registrationForm" class="form-layout" onsubmit="return validateForm()">
+        Name: <input type="text" name="name"><br><br>
+        Password: <input type="password" name="password"><br><br>
+        E-mail ID: <input type="text" name="email"><br><br>
+        Phone Number: <input type="text" name="phone"><br><br>
+        Sex:
+        <input type="radio" name="sex" value="male"> Male
+        <input type="radio" name="sex" value="female"> Female
+        <br><br>
+        Date of Birth:
+        <select name="day">
+            <option>Day</option>
+            </select>
+        <select name="month">
+            <option>Month</option>
+            </select>
+        <select name="year">
+            <option>Year</option>
+            </select>
+        <br><br>
+        Languages Known:
+        <input type="checkbox" name="lang" value="english"> English
+        <input type="checkbox" name="lang" value="telugu"> Telugu
+        <input type="checkbox" name="lang" value="hindi"> Hindi
+        <input type="checkbox" name="lang" value="tamil"> Tamil
+        <br><br>
+        Address: <textarea name="address" rows="4" cols="30"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    <script src="validation.js"></script>
+</body>
+</html>
