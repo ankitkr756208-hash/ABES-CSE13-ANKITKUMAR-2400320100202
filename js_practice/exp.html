@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 4 – Display Input Length</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+        #count {
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Experiment No. 4</h2>
+    <h3>Display the Length of Input Text Using JavaScript</h3>
+
+    <!-- <label>Enter Text:</label><br> -->
+    <input type="text" id="inputBox" onkeyup="showLength()" placeholder="Type something...">
+
+    
+     <p id="count">Length characters: 0</p>
+
+    <script>
+        function showLength() {
+            let text = document.getElementById("inputBox").value;
+            document.getElementById("count").innerText ="Length of Character:"+ text.length;
+        }
+    </script>
+
+</body>
+</html>
