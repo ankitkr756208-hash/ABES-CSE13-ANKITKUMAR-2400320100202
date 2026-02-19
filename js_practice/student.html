@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Student Management</title>
+</head>
+
+<body>
+
+<input type="text" id="name" placeholder="Enter name"><br><br>
+<input type="email" id="email" placeholder="Enter Email"><br><br>
+<input type="number" id="marks" placeholder="Enter Your marks"><br><br>
+
+<button onclick="addStudent()">Add Student</button>
+
+<h2>Student List</h2>
+<ul id="studentList"></ul>
+
+<script>
+
+// Array → store students
+let student = [];
+
+// Set → avoid duplicate emails
+let emailSet = new Set();
+
+// Map → store grades
+let gradeMap = new Map();
+
+function addStudent(){
+
+try {
+
+    debugger;
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const marks = Number(document.getElementById("marks").value);
+
+    // ✅ Email Regex Validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(!emailPattern.test(email)){
+        throw "Invalid Email!";
+    }
+
+    // ✅ Duplicate Email Check
+    if(emailSet.has(email)){
+        throw "Student already exists!";
+    }
+
+    // ✅ Grade Logic
+    let grade;
+
+    if(marks >= 90) grade = "A";
+    else if(marks >= 75) grade = "B";
+    else if(marks >= 50) grade = "C";
+    else grade = "Fail";
+
+    // Store data
+    const studentObj = {name, email, marks, grade};
+
+    student.push(studentObj);
+    emailSet.add(email);
+    gradeMap.set(email, grade);
+
+    showStudents();
+
+}
+catch(error){
+    alert(error);
+}
+
+}
+
+function showStudents(){
+
+const list = document.getElementById("studentList");
+list.innerHTML = "";
+
+student.forEach(s => {
+    list.innerHTML += `
+        <li>
+        ${s.name} | ${s.email} | ${s.marks} | Grade: ${s.grade}
+        </li>
+    `;
+});
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TODO_LIST</title>
+</head>
+
+<body>
+
+<input id="task">
+<button onclick="add()">Add</button>
+
+<ul id="list"></ul>
+
+<script>
+let task = [];
+
+function add(){
+    const input = document.getElementById("task");
+
+    task.push(input.value);
+    input.value = "";
+
+    show();
+}
+
+function show(){
+    const list = document.getElementById("list");
+    list.innerHTML = "";
+
+    for(let i = 0; i < task.length; i++){
+        list.innerHTML += `<li>${task[i]}</li>`;
+    }
+}
+
+ console.log(task);
+</script>
+
+</body>
+</html>
