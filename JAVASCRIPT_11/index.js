@@ -69,3 +69,9 @@ for(let i=0;i<100000;i++){}
 //Table
 let stduent={name:"Ankit kumar",age:20,course:"btech"}
 console.table(stduent);
+
+
+function suma(a=0,b=0){
+    return (a+b);
+}
+console.log(suma(12,12))
