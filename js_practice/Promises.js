@@ -32,7 +32,6 @@ const { promiseHooks } = require("node:v8");
 //         },1000)
 //     },2000)
 // },3000);
-
 // //Promises -> A promises is an object that represent future comletion or failure of an async task
 
 // function waitTwoSeconds() {
@@ -53,9 +52,6 @@ const { promiseHooks } = require("node:v8");
 //     console.log(result);
 // });
 
-
-
-
 function register() {
 
     return new Promise((resolve) => {
@@ -71,7 +67,6 @@ function register() {
     });
 
 }
-
 function login() {
 
     return new Promise((resolve) => {
