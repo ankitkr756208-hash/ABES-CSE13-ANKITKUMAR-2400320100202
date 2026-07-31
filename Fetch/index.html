@@ -16,13 +16,12 @@
                 data.products.forEach((product,idx)=>{
                     const tr = document.createElement("tr");
                     tr.innerHTML =`
-                    <tr>
                         <td>${idx+1}</td>
                         <td>${product.title}</td>
                         <td>${product.category}</td>
                         <td>${product.price}</td>
                         <td>${product.rating}</td>
-                        </tr>
+                        <td><img src='${product.thumbnail}' width="80"></td>
                         `;
                         ele.appendChild(tr);
                 });
@@ -41,7 +40,7 @@
         table{
             margin: auto;
             background-color:antiquewhite;
-            
+
         }
        
     </style>
@@ -55,6 +54,7 @@
             <th>Category</th>
             <th>Price</th>
             <th>Rating</th>
+            <th>image</th>
         </tr>
         </thead>
         <tbody>
