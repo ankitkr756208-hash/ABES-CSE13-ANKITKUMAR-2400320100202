@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Github</title>
+    <script>
+        const URL="https://dummyjson.com/products?limit=30";
+        async function loadProduct(){
+            try{
+                const res=await fetch(URL)
+                const data=await res.json();
+                console.log(res)
+                console.log(data)
+                const ele=document.querySelector("tbody")
+                data.products.forEach((product,idx)=>{
+                    const tr = document.createElement("tr");
+                    tr.innerHTML =`
+                    <tr>
+                        <td>${idx+1}</td>
+                        <td>${product.title}</td>
+                        <td>${product.category}</td>
+                        <td>${product.price}</td>
+                        <td>${product.rating}</td>
+                        </tr>
+                        `;
+                        ele.appendChild(tr);
+                });
+
+                }
+            catch(err){
+                console.log("Error",err);
+            }
+        }
+        loadProduct();
+
+        
+        
+    </script>
+    <style>
+        table{
+            margin: auto;
+            background-color:antiquewhite;
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <table border="1">
+        <thead class="x">
+            <tr>
+            <th>idx</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Rating</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>
