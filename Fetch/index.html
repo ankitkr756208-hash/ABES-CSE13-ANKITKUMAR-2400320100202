@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fetch Github</title>
     <script>
-        const URL="https://dummyjson.com/products?limit=30";
+        const URL="https://dummyjson.com/products";
+        const RATEURL="https://v6.exchangerate-api.com/v6/615b1ef074dfff6412221625/pair/USD/INR";
         async function loadProduct(){
             try{
                 const res=await fetch(URL)
                 const data=await res.json();
-                console.log(res)
-                console.log(data)
+                const RateUrl=await fetch(RATEURL);
+                const rate = await RateUrl.json();
+                const rateXXX = rate.conversion_rate;
+                console.log(rateXXX)
+                // console.log(data)
                 const ele=document.querySelector("tbody")
                 data.products.forEach((product,idx)=>{
                     const tr = document.createElement("tr");
@@ -19,10 +23,13 @@
                         <td>${idx+1}</td>
                         <td>${product.title}</td>
                         <td>${product.category}</td>
-                        <td>${product.price}</td>
+
+                        <td> ${(((product.price))*rateXXX).toFixed(2)} ₹</td>
                         <td>${product.rating}</td>
                         <td><img src='${product.thumbnail}' width="80"></td>
+                        <td><button onClick="ADDTask()">Add to Cart</button></td>
                         `;
+                        
                         ele.appendChild(tr);
                 });
 
@@ -31,6 +38,7 @@
                 console.log("Error",err);
             }
         }
+
         loadProduct();
 
         
@@ -55,11 +63,16 @@
             <th>Price</th>
             <th>Rating</th>
             <th>image</th>
+            <th>Choose</th>
+            
         </tr>
         </thead>
         <tbody>
 
         </tbody>
+        <td ><button>Place Order</button></td>
+        
+
     </table>
 </body>
 </html>
