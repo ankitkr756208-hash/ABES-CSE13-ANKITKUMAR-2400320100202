@@ -7,6 +7,8 @@
     <script>
         const URL="https://dummyjson.com/products";
         const RATEURL="https://v6.exchangerate-api.com/v6/615b1ef074dfff6412221625/pair/USD/INR";
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
         async function loadProduct(){
             try{
                 const res=await fetch(URL)
@@ -27,7 +29,7 @@
                         <td> ${(((product.price))*rateXXX).toFixed(2)} ₹</td>
                         <td>${product.rating}</td>
                         <td><img src='${product.thumbnail}' width="80"></td>
-                        <td><button onClick="ADDTask()">Add to Cart</button></td>
+                        <td><button onclick="addToCart('${product.title}')">Add To Cart</button></td>
                         `;
                         
                         ele.appendChild(tr);
@@ -39,10 +41,29 @@
             }
         }
 
+        function addToCart(title){
+            cart.push(title);
+           
+
+            // Save to local storage
+            localStorage.setItem("cart",JSON.stringify(cart));
+             alert(title +" Added To cart");
+        }
+
+        function placeOrder(){
+            if(cart.length===0){
+                alert("Cart is empty");
+            }
+            else {
+                alert("Order placed for :",+ cart.join(" , "));
+                cart=[];
+                  localStorage.removeItem("cart"); // clear storage
+            }
+        }
+       
+
         loadProduct();
 
-        
-        
     </script>
     <style>
         table{
@@ -69,11 +90,12 @@
         </thead>
         <tbody>
 
-        </tbody>
-        <td ><button>Place Order</button></td>
-        
+        </tbody> 
 
     </table>
+     <div style="text-align:center; margin-top:10px;">
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
         
 </body>
 </html>
