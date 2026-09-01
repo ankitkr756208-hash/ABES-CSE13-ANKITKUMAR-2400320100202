@@ -9,5 +9,5 @@ console.log(pattern1.test(email));
 
 //Phone validation
 let phone = "9876543210";
-let pattern3 = /^[0-9]{10}$/;
-console.log(pattern3.test(phone));
+// let pattern3 = /^[0-9]{10}$/;
+// console.log(pattern3.test(phone));
