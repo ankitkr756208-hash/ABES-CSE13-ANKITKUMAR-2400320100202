@@ -1,0 +1,19 @@
+{
+  "name": "book_npm-app",
+  "version": "1.0.0",
+  "description": "My Book app using npm",
+  "keywords": [
+    "react.js"
+  ],
+  "license": "ISC",
+  "author": "Ankit kumar",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  }
+}
