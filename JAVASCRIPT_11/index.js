@@ -69,3 +69,19 @@ for(let i=0;i<100000;i++){}
 //Table
 let stduent={name:"Ankit kumar",age:20,course:"btech"}
 console.table(stduent);
+
+
+function suma(a=0,b=0){
+    return (a+b);
+}
+console.log(suma(12,12))
+
+
+// filter and map
+const arr1=[1,2,3,4,5,6,7,8,9]
+const even=arr1.filter((num)=>{
+    return num%2==0;
+})
+console.log(even)
+
+

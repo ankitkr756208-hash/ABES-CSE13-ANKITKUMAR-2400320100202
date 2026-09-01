@@ -3,7 +3,7 @@ let email = "test@gmail.com";
 
 let pattern1 = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-console.log(pattern1.test(email));  // true
+console.log(pattern1.test(email)); 
 
 
 
